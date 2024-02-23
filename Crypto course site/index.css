@@ -1,0 +1,190 @@
+@import url('https://fonts.googleapis.com/css2?family=Buenard:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rammetto+One&display=swap');
+
+:root {
+    /*Colors*/
+    --clr-light-gray: #CDCDCD;
+    --clr-dark-gray: #1E1E1E;
+    --clr-black: #000000;
+    --clr-white: #FFFFFF;
+    --clr-light-purple: #A090FF;
+    --clr-dark-blue: #151659;
+    --clr-red: #A22C29;
+    
+
+    /*Font Sizes*/
+    --small-text: 1.25rem;
+    --medium-text: 1.375rem;
+    --large-text: 2rem;
+
+    /*gaps*/
+    --gap-small: 8px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    font-family: "Buenard", serif;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow-x: hidden;
+}
+
+
+/*ANCHOR - Nav bar */
+.navbar {
+    position: absolute;
+    width: 68.75%;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 28px;
+}
+
+
+.navbar ul {
+    display: flex;
+    list-style-type: none;
+    gap: 50px;
+}
+
+
+.navbar a{
+    color: var(--clr-white);
+    font-size: var(--small-text);
+    text-decoration: none;
+    
+}
+
+
+.navbar-logo {
+    color: var(--clr-white);
+    font-size: var(--large-text);
+}
+
+
+.navbar-login {
+    color: var(--clr-white);
+    font-size: var(--small-text);
+}
+
+
+
+
+
+
+/*ANCHOR - Hero Section */
+.hero-section {
+    background: var(--clr-light-gray);
+    position: relative;
+    min-width: 100vw;
+    height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    z-index: -1;
+}
+
+
+.hero-image {
+   position: absolute;
+   min-width: 100vw;
+   max-height: 100vh;
+
+   clip-path: polygon(0 0, 100% 0, 100% 70%, 0 86%);
+   filter: brightness(75%);
+   filter: contrast(110%);
+}
+
+
+.hero-section-content {
+    width: 68.75%;
+    height: max-content;
+
+    display: flex;
+    flex-direction: column;
+
+    z-index: 1;
+}
+
+
+.hero-heading {
+    color: var(--clr-white);
+    font-size: var(--large-text);
+    letter-spacing: 1px;
+    line-height: 40px;
+}
+
+
+.hero-subheading {
+    color: var(--clr-light-gray);
+    font-size: var(--small-text);
+    letter-spacing: 1px;
+    margin-top: 8px;
+}
+
+
+.hero-btn {
+    color: var(--clr-white);
+    font-size: var(--medium-text);
+    border: 1px solid var(--clr-white);
+    width: 8.563rem;
+    height: 2.313rem;
+
+    margin-top: 8px;
+    border-radius: 25px;
+    background: transparent;
+    letter-spacing: 1px;
+}
+
+
+/*ANCHOR - Top Information Box */
+.info-box {
+   background: var(--clr-light-gray);
+   box-shadow: 0px 0px 50px var(--clr-dark-blue);
+   position: absolute;
+   width: 45%;
+   height: 18%;
+
+   display: flex;
+   top: 74.35%;
+   border-radius: 3px;
+   justify-content: space-around;
+
+   z-index: 1;
+}
+
+
+.info-box-icon {
+    width: 60px;
+    height: 60px;   
+}
+
+
+.icon-container {
+    gap: var(--gap-small);
+    height: 100%;
+    width: calc(100% / 3);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.info-box-text {
+    color: var(--clr-dark-blue);
+    font-size: var(--small-text);
+}
+
