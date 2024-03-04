@@ -49,6 +49,7 @@ body {
   flex-direction: column;
   align-items: center;
   overflow-x: hidden;
+  background: var(--clr-light-gray);
 }
 
 .blue-highlight {
@@ -90,6 +91,7 @@ body {
 .navbar-logo {
   color: var(--clr-white);
   font-size: var(--large-text);
+  font-family: "Rammetto One", sans-serif;
 }
 
 .navbar-login {
@@ -296,12 +298,11 @@ body {
     position: relative;
     background: var(--clr-light-gray);
     width: 100vw;
-    height: 100vh;
+    height: 68.6vh;
+    height: 68.6dvh;
     align-items: center;
     display: flex;
     flex-direction: column;
-
-    box-shadow: 0px 0px 60px 1px var(--clr-dark-blue);
 }
 
 .purchase-background {
@@ -312,6 +313,7 @@ body {
 
     display: flex;
     justify-content: center;
+    box-shadow: 0 0 3px black;
 }
 
 .purchase-background-content-container {
@@ -373,8 +375,8 @@ body {
 }
 
 .price-container {
-  display: flex;
   gap: var(--gap-medium);
+  display: flex;
   position: relative;
 }
 
@@ -384,17 +386,47 @@ body {
 }
 
 .original-price {
+  font-size: var(--medium-text);
   color: var(--clr-dark-gray);
   text-decoration: line-through;
-  font-size: var(--medium-text);
 }
 
 .discount-total {
+  color: var(--clr-dark-gray);
   position: absolute;
   left: 35%;
   top: 65%;
   opacity: 75%;
-  color: var(--clr-dark-gray);
+}
+
+.discount-time-container {
+  color: var(--clr-red);
+  margin-top: var(--gap-small);
+  gap: var(--gap-small);
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+}
+
+.time-icon {
+  margin-top: 2px;
+}
+
+.purchase-btn {
+  font-size: var(--small-text);
+  border: 1px solid var(--clr-dark-blue);
+  background-color: transparent;
+  width: 80%;
+  margin: auto;
+  padding: 8px 0;
+  font-weight: bold;
+}
+
+.purchase-guarantee-text {
+  font-size: calc(var(--small-text) - 4px);
+  width: 100%;
+  text-align: center;
 }
 
 
@@ -417,10 +449,10 @@ body {
 
 .purchase-description-container {
   margin-top: var(--gap-xl);
+  gap: var(--gap-medium);
   width: 46%;
   display: flex;
   flex-direction: column;
-  gap: var(--gap-medium)
 }
 
 .purchase-content-heading {
@@ -433,4 +465,154 @@ body {
   font-size: var(--small-text);
   line-height: var(--lh-normal);
   letter-spacing: 1px;
+}
+
+
+
+
+
+
+
+/*ANCHOR - Bottom nav */
+
+.bottom-nav-section {
+  background: var(--clr-dark-gray);
+  margin-top: var(--gap-medium);
+  width: 100vw;
+  height: max-content;
+
+
+  display: flex;
+  justify-content: center;
+  box-shadow: 0 0 3px black;
+}
+
+
+.bottom-nav-content {
+  width: var(--width-content);
+  height: max-content;
+  display: flex;
+  flex-direction: row;
+}
+
+.bottom-nav-content-container {
+   display: flex;
+   flex-direction: column;
+   width: calc(100% / 5);
+   align-items: center;
+   gap: var(--gap-medium);
+   position: relative;
+}
+
+.bottom-nav-text {
+  color: var(--clr-white);
+  font-size: 16px;
+}
+
+.bottom-nav-heading {
+  color: var(--clr-white);
+  font-size: var(--medium-text);
+  margin: var(--gap-large);
+
+  letter-spacing: 1px;
+  font-weight: bold;
+}
+
+.bottom-nav-logo {
+  font-size: var(--large-text);
+  font-family: "Rammetto One", sans-serif;
+  color: var(--clr-white);
+  margin: var(--gap-large);
+  letter-spacing: 1px;
+}
+
+.social-media-paltform-container,
+.contact-us-platform-container {
+  width: 100%;
+  display: flex;
+  gap: var(--gap-large);
+  align-items: center;
+  justify-content: center;
+}
+
+
+.social-media-icon {
+  width: 25px;
+  height: 25px;
+  position: absolute;
+  left: 20%;
+  color: white;
+}
+
+.contact-us-icon {
+  position: absolute;
+  left: 8%;
+  width: 25px;
+  height: 25px;
+}
+
+.language-button {
+   border: 1px solid var(--clr-light-purple);
+   border-radius: 25px;
+   padding: 5px 8px;
+   width: 65%;
+   font-size: var(--small-text);
+   color: var(--clr-light-purple);
+   background: transparent;
+   letter-spacing: 1px;
+   position: relative;
+   display: flex;
+   justify-content: center;
+}
+
+.language-icon {
+  width: 25px;
+  height: 25px;
+  position: absolute;
+  top: 9px; 
+  left: 125px;
+}
+
+
+
+
+/*ANCHOR - Copyright section */
+
+.copyright-section {
+  width: 100vw;
+  height: 3vh;
+  background: #1A1A1A;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0 0 3px black;
+}
+
+.copyright-section-support {
+  width: max-content;
+  margin-right: var(--gap-large);
+  display: flex;
+  gap: var(--gap-small); 
+}
+
+.copyright-text {
+  line-height: var(--lh-normal);
+  color: var(--clr-white);
+}
+
+.actual-copyright {
+  margin-left: var(--gap-small);
+}
+
+a:link { 
+  text-decoration: none; 
+} 
+a:visited { 
+  text-decoration: none; 
+} 
+a:hover { 
+  text-decoration: none; 
+} 
+a:active { 
+  text-decoration: none; 
 }
