@@ -74,6 +74,7 @@ body {
   flex-direction: row;
   justify-content: space-between;
   margin-top: 28px;
+  z-index: 1;
 }
 
 .navbar ul {
@@ -115,8 +116,6 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-
-  z-index: -1;
 }
 
 .hero-image {
@@ -163,6 +162,13 @@ body {
   border-radius: 25px;
   background: transparent;
   letter-spacing: 1px;
+}
+
+.hero-btn:hover {
+  cursor: pointer;
+  text-shadow: 0 0 3px white;
+  transition: .3s ease;
+  border: 1px solid var(--clr-light-purple);
 }
 
 
@@ -277,6 +283,14 @@ body {
   border-radius: var(--rds-normal);
 
   padding: 8px 30px;
+}
+
+.about-btn:hover {
+  transition: .5s ease;
+  background: transparent;
+  cursor: pointer;
+  color: var(--clr-black);
+  text-decoration: underline var(--clr-black);
 }
 
 .heading-decoration {
@@ -421,6 +435,15 @@ body {
   margin: auto;
   padding: 8px 0;
   font-weight: bold;
+  z-index:2;
+
+  transition: .5s ease;
+}
+
+.purchase-btn:hover {
+  border: 1px solid var(--clr-black);
+  color: var(--clr-light-purple);
+  cursor: pointer;
 }
 
 .purchase-guarantee-text {
@@ -504,9 +527,11 @@ body {
    position: relative;
 }
 
-.bottom-nav-text {
+
+.bottom-nav-text a {
   color: var(--clr-white);
   font-size: 16px;
+  
 }
 
 .bottom-nav-heading {
@@ -551,7 +576,7 @@ body {
   height: 25px;
 }
 
-.language-button {
+.language-btn{
    border: 1px solid var(--clr-light-purple);
    border-radius: 25px;
    padding: 5px 8px;
@@ -563,6 +588,14 @@ body {
    position: relative;
    display: flex;
    justify-content: center;
+   transition: .3s ease;
+}
+
+.language-btn:hover {
+  text-shadow: 0 0 3px var(--clr-white);
+  border: 1px solid var(--clr-white);
+  color: var(--clr-white);
+  cursor: pointer;
 }
 
 .language-icon {
@@ -595,7 +628,8 @@ body {
   gap: var(--gap-small); 
 }
 
-.copyright-text {
+.copyright-text,
+.copyright-text a {
   line-height: var(--lh-normal);
   color: var(--clr-white);
 }
@@ -603,6 +637,15 @@ body {
 .actual-copyright {
   margin-left: var(--gap-small);
 }
+
+
+.bottom-nav-text a:hover,
+.copyright-text a:hover,
+.navbar a:hover {
+  color: var(--clr-light-purple);
+  transition: .3s ease;
+}
+
 
 a:link { 
   text-decoration: none; 
