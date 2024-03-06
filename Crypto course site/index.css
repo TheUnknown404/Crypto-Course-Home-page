@@ -69,6 +69,7 @@ body {
 .navbar {
   position: absolute;
   width: var(--width-content);
+  height: max-content;
 
   display: flex;
   flex-direction: row;
@@ -81,12 +82,14 @@ body {
   display: flex;
   list-style-type: none;
   gap: 50px;
+  width: 100%;
 }
 
 .navbar a {
   color: var(--clr-white);
   font-size: var(--small-text);
   text-decoration: none;
+  width: 100%;
 }
 
 .navbar-logo {
@@ -98,6 +101,43 @@ body {
 .navbar-login {
   color: var(--clr-white);
   font-size: var(--small-text);
+}
+
+.hamburger-menu-closed {
+  width: calc(var(--large-text) + 8px);
+  position: absolute;
+  height: auto;
+  right: 5%;
+  display: none;
+}
+
+
+.show-menu {
+  position: absolute;
+  width: var(--width-content);
+  height: max-content;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 28px;
+  z-index: 1;
+  text-decoration: underline 1px inset;
+  border-bottom: 1px inset black;
+}
+
+.show-menu-ul {
+  display: flex;
+  list-style-type: none;
+  gap: 50px;
+  flex-direction: column;
+}
+
+.show-menu a {
+  color: var(--clr-white);
+  font-size: var(--medium-text);
+  text-decoration: none;
+  font-weight: bold;
 }
 
 
@@ -566,6 +606,7 @@ body {
   height: 25px;
   position: absolute;
   left: 20%;
+  margin-top: 3px;
   color: white;
 }
 
@@ -602,8 +643,8 @@ body {
   width: 25px;
   height: 25px;
   position: absolute;
-  top: 9px; 
-  left: 125px;
+  left: 75%;
+  top: 27%;
 }
 
 
@@ -641,9 +682,12 @@ body {
 
 .bottom-nav-text a:hover,
 .copyright-text a:hover,
-.navbar a:hover {
+.navbar a:hover,
+.hamburger-menu-closed:hover,
+.show-menu a:hover {
   color: var(--clr-light-purple);
   transition: .3s ease;
+  cursor: pointer;
 }
 
 
@@ -658,4 +702,15 @@ a:hover {
 } 
 a:active { 
   text-decoration: none; 
+}
+
+
+@media (max-width: 900px) {
+  .hamburger-menu-closed {
+    display: block;
+  }
+
+  .navbar a{
+    display: none;
+  }
 }
