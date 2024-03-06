@@ -1,15 +1,39 @@
 const hamburgerClosed = document.querySelector('.hamburger-menu-closed');
-const navbarLinks = document.querySelectorAll('.navbar a');
-const navbarList = document.querySelector('.navbar ul');
+const hamburgerOpened = document.querySelector('.hamburger-menu-opened');
 const navbar = document.querySelector('.navbar');
+const navText = document.querySelectorAll('.navbar li a');
+const navItems = document.querySelector('.navbar ul');
 
-hamburgerClosed.addEventListener('click', () => {
+const openMenu = () => {
     hamburgerClosed.style.display = "none";
-    navbar.classList.add("show-menu");
-    navbarList.classList.add("show-menu-ul")
-    navbarLinks.forEach(link => {
-        link.style.display = "flex";
+    hamburgerOpened.style.display = "block";
+
+    navItems.classList.toggle("navItemsActive");
+    navbar.classList.toggle("navbarActive");
+    navText.forEach(text => {
+        text.classList.toggle('textActive');
     })
-    
-    navbar.classList.remove("navbar");
+}
+
+const closeMenu = () => {
+    hamburgerClosed.style.display = "block";
+    hamburgerOpened.style.display = "none";
+
+    navItems.classList.toggle("navItemsActive");
+    navbar.classList.toggle("navbarActive");
+    navText.forEach(text => {
+        text.classList.toggle('textActive');
+    })
+}
+
+hamburgerClosed.addEventListener('click', openMenu);
+hamburgerOpened.addEventListener('click', closeMenu);
+
+window.addEventListener('resize', () => {
+    const screenWidth = window.innerWidth;
+    if (screenWidth > 900) {
+        hamburgerClosed.style.display = "none";
+    } else {
+        hamburgerClosed.style.display = "block";
+    }
 })
