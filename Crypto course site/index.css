@@ -364,6 +364,7 @@ body {
     box-shadow: 0 0 3px black;
 }
 
+
 .purchase-background-content-container {
     width: var(--width-content);
     display: flex;
@@ -416,6 +417,11 @@ body {
   border-radius: var(--rds-normal); 
   box-shadow: 0px 2px 60px 1px var(--clr-dark-blue);
   height: 100%;
+}
+.course-includes-text {
+  font-size: var(--medium-text);
+  letter-spacing: 1px;
+  color: var(--clr-dark-blue);
 }
 
 .purchase-img-text {
@@ -699,6 +705,110 @@ a:hover {
 a:active { 
   text-decoration: none; 
 }
+
+
+
+@media (max-width: 1600px) {
+  .about-heading,
+  .purchase-background-heading,
+  .purchase-content-heading {
+    font-size: calc(var(--large-text) - 8px);
+  }
+
+  .about-body,
+  .purchase-background-body,
+  .purchase-content-body {
+    font-size: calc(var(--small-text) - 4px);
+  }
+
+   .about-img-container {
+    width: 60%;
+   }
+
+   .info-box {
+    height: 15%;
+   }
+}
+
+
+
+@media (max-width: 1200px) {
+  .about-img-container {
+    display: none;
+  }
+
+  .about-section-content {
+    justify-content: left
+  }
+
+  .about-description-container {
+    width: 95%;
+  }
+
+  .about-body {
+    font-size: var(--small-text);
+  }
+
+  .about-heading {
+    font-size: var(--large-text);
+  }
+
+
+  .info-box-icon {
+    width: 45px;
+    height: 45px;
+  }
+
+  .info-box-text {
+    font-size: calc(var(--small-text) - 5px);
+  }
+
+  .info-box {
+    height: 12%;
+  }
+
+  .purchase-content-body {
+    line-height: calc(var(--lh-normal) - 4px);
+  }
+
+  .purchase-img-text {
+    font-size: calc(var(--small-text) - 4px);
+  }
+
+  .discount-price {
+    font-size: calc(var(--large-text) - 4px);
+  }
+  
+  .original-price {
+    font-size: calc(var(--medium-text) - 4px);
+  }
+
+
+
+
+  /*
+  .discount-price {
+    color: var(--clr-dark-blue);
+    font-size: var(--large-text);
+  }
+  
+  .original-price {
+    font-size: var(--medium-text);
+    color: var(--clr-dark-gray);
+    text-decoration: line-through;
+  }
+  
+  .discount-total {
+    color: var(--clr-dark-gray);
+    position: absolute;
+    left: 35%;
+    top: 65%;
+    opacity: 75%;
+  }
+  */
+ }
+
+
 
 @media (max-width: 900px) {
   .navbar-menu li a {
